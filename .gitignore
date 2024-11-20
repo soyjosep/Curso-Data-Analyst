@@ -1,0 +1,59 @@
+# Entornos virtuales de Python
+venv/
+.env/
+.entorno_ejercicios_python/
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Configuración del entorno local
+*.env
+.env.*
+
+# Archivos y carpetas generados por IDEs y editores
+.vscode/
+.idea/
+*.swp
+
+# Archivos de configuración de macOS
+.DS_Store
+
+# Archivos binarios o de bibliotecas externas
+*.dll
+*.dylib
+*.exe
+*.o
+*.a
+*.out
+
+# Archivos de logs
+*.log
+
+# Configuración de bases de datos o resultados temporales
+db.sqlite3
+*.db
+
+# Archivos generados por pip
+*.egg-info/
+*.egg
+
+# Archivos relacionados con Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Archivos de resultados o datos temporales
+*.csv
+*.tsv
+*.bak
+*.tmp
+*.old
+
+# Archivos de dependencias externas (si no usas contenedores)
+dist/
+build/
+
+# Archivos de librerías externas si las has instalado
+site/
