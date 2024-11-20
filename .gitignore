@@ -2,6 +2,8 @@
 venv/
 .env/
 .entorno_ejercicios_python/
+data_analyst/
+.DS_Store
 
 # Archivos de caché de Python
 __pycache__/
