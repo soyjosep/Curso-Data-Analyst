@@ -1,6 +1,6 @@
 # Introducción al Análisis de Datos
 
-# Conceptos básicas del Análisis de Datos
+# Conceptos básicos del Análisis de Datos
 
 """ 
 El análisis de datos es el proceso de inspeccionar, limpiar, transformar y modelar datos con el objetivo de
