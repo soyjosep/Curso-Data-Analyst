@@ -92,5 +92,5 @@ Diferencias clave entre datos estructurados y no estructurados:
         Ejemplo: Analizar sentimientos en comentarios de clientes en redes sociales usando NLP.
 
     La principal diferencia radica en la facilidad de acceso y análisis: los datos estructurados son más directos, 
-    mientras que los no estructurados contienen información más rica pero requieren más recursos para aprovecharla
+    mientras que los no estructurados contienen información más rica pero requieren más recursos para aprovecharla.
 """
