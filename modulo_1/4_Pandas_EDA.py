@@ -15,7 +15,7 @@ Objetivos:
         - Inspección inicial del conjunto de datos.
         - Identificación de valores faltantes y tipos de datos.
         - Cálculo de estadísticas descriptivas.
-        - Visualización de relaciones entre variables.      
+        - Visualización de relaciones entre variables.
 """
 
 """ 
@@ -105,14 +105,47 @@ max        7.900000     4.400000      6.900000     2.500000
         - Distingue las diferentes especies utilizando colores o marcadores distintos.
         - Añade etiquetas y título al gráfico para una mejor comprensión.
 """
-# Crear un gráfico de dispersión (scatter plot)
-df.plot(kind='scatter', x='sepal_length', y='sepal_width', alpha=0.5)
-plt.title('Sepal Length vs Sepal Width')
+
+# Crear el gráfico de dispersión con etiquetas y título mejorado
+plt.figure(figsize=(10, 8))
+species_unique = df['species'].unique()
+colors = ['blue', 'green', 'orange']
+
+for specie, color in zip(species_unique, colors):
+    subset = df[df['species'] == specie]
+    plt.scatter(subset['sepal_length'], subset['sepal_width'], label=specie, c=color, alpha=0.7)
+
+# Título y etiquetas
+plt.title('Relación entre Largo y Ancho del Sépalo Diferenciada por Especie', fontsize=16)
+plt.xlabel('Largo del Sépalo (cm)', fontsize=14)
+plt.ylabel('Ancho del Sépalo (cm)', fontsize=14)
+plt.legend(title='Especies', fontsize=12, title_fontsize=14)
+plt.grid(alpha=0.3)
+plt.tight_layout()
 plt.show()
 
 """
 Instrucciones adicionales:
     - Análisis: Después de crear el gráfico, analiza si hay patrones o relaciones entre las variables y las especies.
+        Observaciones generales:
+            1. Iris-setosa(azul):
+                - Tiende a tener valores más altos de sepal_width en comparación con las otras especies.
+                - Los valores de sepal_length son consistentemente más bajos (concentrados entre 4.5 y 55cm).
+                - En el gráfico, los puntos azules están claramente agrupados en una región específica del espacio, 
+                    lo que sugiere que esta especie es fácilmente diferenciable basándose en estas dos variables.
+
+            2. Iris-versicolor(verde):
+                - Tiene valores intermedios de sepal_length (entre 5.0cm y 6.5cm).
+                - Los valores de sepal_width son más estrechos y oscilan en un rango menor (entre 2.5cm y 3.5cm).
+                - Muestra cierta superposición con las otras dos especies, pero sigue mostrando una separación moderada.
+
+            3. Iris virginica (naranja):
+                - Tiende a tener los valores más altos de sepal_length, alcazando hasta 7.5cm.
+                - Los valores de sepal_width están en un rango similar al de Ìris-versicolor (entre 2.5cm y 3.5cm),
+                pero ligeramente más distribuidos hacia valores mayores.
+
+                XXXXXXXXXXXXXXXXXXXXXXXX VAMOS POR AQUI
+
     - Preguntas para Reflexionar:
         - ¿Puedes identificar agrupaciones de especies en el gráfico?
         - ¿Qué te indican las estadísticas descriptivas sobre cada característica?
