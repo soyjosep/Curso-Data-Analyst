@@ -144,9 +144,109 @@ Instrucciones adicionales:
                 - Los valores de sepal_width están en un rango similar al de Ìris-versicolor (entre 2.5cm y 3.5cm),
                 pero ligeramente más distribuidos hacia valores mayores.
 
-                XXXXXXXXXXXXXXXXXXXXXXXX VAMOS POR AQUI
+Conclusiones sobre las relaciones:
 
-    - Preguntas para Reflexionar:
-        - ¿Puedes identificar agrupaciones de especies en el gráfico?
-        - ¿Qué te indican las estadísticas descriptivas sobre cada característica?
+    1. Separación de Iris-setosa:
+    - La Iris-setosa está claramente separada de las otras dos especies en función de estas dos variables.
+        Esto se debe a que tiene el menor sepal_length y un mayor sepal_width, creando un patrón único.
+
+    2. Superposición entre Iris-versicolor e Iris-virginica en cuanto a sus valores de sepal_length y sepal_width, 
+        pero Iris virginica tiende a tener valores más altos en sepal_length.
+
+    3. Posible relación inversa débil entre las variables:
+        - En el caso de Iris-setosa, parece haber una leve relación inversa entre sepal_length y sepal_width,
+            es decir, a mayor largo menor ancho.
+        - Para las otras especies, la relación no es tan evidente y parece haber una mayor dispersión  entre los datos.
+
+
+     - ¿Qué te indican las estadísticas descriptivas sobre cada característica?
+"""
+
+# Estadísticas descriptivas generales
+stats_descriptive = df.describe()
+
+# Estadísticas descriptivas por especie
+stats_by_species = df.groupby('species').describe()
+
+# Mostrar estadísticas descriptivas generales
+print("Estadísticas descriptivas generales:\n")
+print(stats_descriptive)
+
+# Mostrar estadísticas descriptivas por especie
+print("\nEstadísticas descriptivas por especie:\n")
+print(stats_by_species)
+
+# Guardar las estadísticas descriptivas en un archivo CSV (opcional)
+stats_descriptive.to_csv('estadisticas_generales.csv')
+stats_by_species.to_csv('estadisticas_por_especie.csv')
+
+""" 
+Resultado:
+Estadísticas Descriptivas de las características numéricas (con describe):
+       sepal_length  sepal_width  petal_length  petal_width
+count    150.000000   150.000000    150.000000   150.000000
+mean       5.843333     3.054000      3.758667     1.198667
+std        0.828066     0.433594      1.764420     0.763161
+min        4.300000     2.000000      1.000000     0.100000
+25%        5.100000     2.800000      1.600000     0.300000
+50%        5.800000     3.000000      4.350000     1.300000
+75%        6.400000     3.300000      5.100000     1.800000
+max        7.900000     4.400000      6.900000     2.500000
+
+1. sepal_length (Largo del sépalo):
+	•	Rango (min - max): 4.3 a 7.9 cm.
+	•	Indica que hay una diferencia significativa en el largo del sépalo entre las especies.
+	•	Media: 5.84 cm.
+	•	Valor promedio, que cae entre los valores típicos de Iris-versicolor y Iris-virginica.
+	•	Desviación estándar (std): 0.83 cm.
+	•	Muestra una variabilidad moderada en los datos, sugiriendo que las especies difieren lo suficiente
+        en esta característica para separarlas.
+	•	Distribución:
+	•	La mayoría de los valores se encuentran entre el primer (5.1 cm) y tercer cuartil (6.4 cm), 
+        lo que sugiere que el largo del sépalo es una característica importante para distinguir especies.
+
+2. sepal_width (Ancho del sépalo):
+	•	Rango (min - max): 2.0 a 4.4 cm.
+	•	Indica una menor variabilidad comparada con sepal_length.
+	•	Media: 3.05 cm.
+	•	Cerca del valor intermedio entre las tres especies.
+	•	Desviación estándar (std): 0.43 cm.
+	•	Baja dispersión, lo que implica que el ancho del sépalo tiene menos variabilidad entre especies.
+	•	Distribución:
+	•	Iris-setosa tiende a tener valores más altos de sepal_width, 
+        mientras que las otras especies tienen valores más pequeños y similares.
+
+3. petal_length (Largo del pétalo):
+	•	Rango (min - max): 1.0 a 6.9 cm.
+	•	Muestra una gran diferencia entre especies.
+	•	Media: 3.76 cm.
+	•	Los valores promedio son más representativos de Iris-versicolor e Iris-virginica.
+	•	Desviación estándar (std): 1.76 cm.
+	•	Alta variabilidad, lo que indica que esta característica es una de las más útiles para diferenciar las especies.
+	•	Distribución:
+	•	Iris-setosa tiene pétalos significativamente más cortos (alrededor de 1.0 a 1.5 cm), 
+        lo que la separa completamente de las otras dos especies.
+
+4. petal_width (Ancho del pétalo):
+	•	Rango (min - max): 0.1 a 2.5 cm.
+	•	Similar a petal_length, esta característica muestra una amplia variación entre especies.
+	•	Media: 1.19 cm.
+	•	Valores cercanos a los de Iris-versicolor.
+	•	Desviación estándar (std): 0.76 cm.
+	•	Alta dispersión, lo que sugiere que esta característica también es útil para diferenciar especies.
+	•	Distribución:
+	•	Iris-setosa tiene valores consistentemente bajos (cercanos a 0.1 cm), lo que la distingue de las otras especies.
+
+Conclusiones generales:
+
+	1.	Características más diferenciadoras:
+	    •	petal_length y petal_width tienen rangos amplios y altas desviaciones estándar, 
+            lo que las convierte en las características más útiles para distinguir entre especies.
+	    •	Estas dos características separan claramente a Iris-setosa del resto y permiten 
+            diferenciar parcialmente entre Iris-versicolor e Iris-virginica.
+
+	2.	Características menos diferenciadoras:
+	    •	sepal_length y sepal_width muestran menos variabilidad y superposición entre especies, 
+            aunque siguen siendo útiles para identificar Iris-setosa.
+
 """
