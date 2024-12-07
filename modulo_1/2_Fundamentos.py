@@ -47,7 +47,6 @@ rango = np.ptp(calificaciones)  # Rango (máximo - mínimo)
 varianza = np.var(calificaciones, ddof=1)  # Varianza muestral
 desviacion_estandar = np.std(calificaciones, ddof=1)  # Desviación estándar muestral
 
-# Resultados
 print("Medidas de Tendencia Central:")
 print(f"Media: {media}")
 print(f"Mediana: {mediana}")
