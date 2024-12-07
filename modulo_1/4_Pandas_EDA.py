@@ -130,7 +130,7 @@ Instrucciones adicionales:
         Observaciones generales:
             1. Iris-setosa(azul):
                 - Tiende a tener valores más altos de sepal_width en comparación con las otras especies.
-                - Los valores de sepal_length son consistentemente más bajos (concentrados entre 4.5 y 55cm).
+                - Los valores de sepal_length son consistentemente más bajos (concentrados entre 4.5 y 5.5cm).
                 - En el gráfico, los puntos azules están claramente agrupados en una región específica del espacio, 
                     lo que sugiere que esta especie es fácilmente diferenciable basándose en estas dos variables.
 
