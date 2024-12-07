@@ -240,7 +240,7 @@ max        7.900000     4.400000      6.900000     2.500000
 Conclusiones generales:
 
 	1.	Características más diferenciadoras:
-	    •	sepal_length y sepal_width tienen rangos amplios y altas desviaciones estándar, 
+	    •	petal_length y petal_width tienen rangos amplios y altas desviaciones estándar, 
             lo que las convierte en las características más útiles para distinguir entre especies.
 	    •	Estas dos características separan claramente a Iris-setosa del resto y permiten 
             diferenciar parcialmente entre Iris-versicolor e Iris-virginica.
