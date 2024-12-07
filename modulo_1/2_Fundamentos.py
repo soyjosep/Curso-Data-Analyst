@@ -84,7 +84,7 @@ Interpretación de los resultados originales:
     Refleja que la mitad de los estudiantes obtuvo calificaciones iguales o mayores a 85. 
     Esto refuerza la idea de que la mayoría obtuvo un buen rendimiento
 3. Moda (80):
-    El valor más frecuente es 80, lo que sugiere que varias calificaciones están legeramente por debajo de la media.
+    El valor más frecuente es 80, lo que sugiere que varias calificaciones están ligeramente por debajo de la media.
 4. Desviación estandar (9.13):
     Indica que las calificaciones tienden a desviarse alrededor de 9 puntos de la media. Esto muestra una dispersión moderada 
     entre los resultados, es decir, algunos estudiantes obtuvieron calificaciones más altas o más bajas que el promedio, 
