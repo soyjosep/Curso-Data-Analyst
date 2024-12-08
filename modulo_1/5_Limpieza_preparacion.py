@@ -219,4 +219,14 @@ Análisis y Reflexión:
     - Codificación de variables categóricas:
         - Los modelos de machine learning requieren variables numéricas.
         - La codificación one-hot evita asignar un orden arbitrario a las categorías y previene introducir reflexiones inexistentes.
+
+Preguntas para reflexionar:
+
+1. ¿Por qué es importante normalizar los datos?
+    - Para garantizar que todas las variables contribuyen por igual al análisis.
+    - Evita que variables con magnitudes mayores dominen sobre las de magnitudes menores.
+
+2. ¿Cómo afecta la codificación de variables categóricas al análisis y a los modelos predictivos?
+    - Permite incluir variables categóricas en modelos que solo aceptan variables numéricas.
+    - Una codificación incorrecta puede introducir relaciones falsas o perder información.
 """
