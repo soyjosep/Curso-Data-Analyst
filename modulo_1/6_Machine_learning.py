@@ -1,5 +1,4 @@
 import pandas as pd  # Para manipulación de datos
-import numpy as np   # Para cálculos numéricos
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
